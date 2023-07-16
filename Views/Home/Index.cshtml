@@ -1,0 +1,19 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    @{
+        ViewBag.Title = "Speed Calculator";
+    }
+
+    <h2>Speed Calculator</h2>
+
+    @using (Html.BeginForm("Calculate", "Home", FormMethod.Post))
+    {
+        <label for="speedInMetersPerSecond">Speed (m/s):</label>
+        <input type="number" step="0.01" id="speedInMetersPerSecond" name="speedInMetersPerSecond" required />
+        <br />
+        <input type="submit" value="Calculate" />
+    }
+</div>
